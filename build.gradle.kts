@@ -10,6 +10,7 @@ plugins {
     // Apply the Kotlin JVM plugin to add support for Kotlin on the JVM.
     id("org.jetbrains.kotlin.jvm").version(kotlinVersion)
     id("io.gitlab.arturbosch.detekt").version("1.0.0-RC12")
+    id("com.gradle.build-scan") version "1.16"
 }
 
 repositories {
@@ -32,4 +33,13 @@ dependencies {
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit")
 
     detektPlugins("io.gitlab.arturbosch.detekt:detekt-formatting:1.0.0-RC12")
+}
+
+buildScan {
+    setTermsOfServiceUrl("https://gradle.com/terms-of-service")
+    setTermsOfServiceAgree("yes")
+    if (!System.getenv("CI").isNullOrEmpty()) {
+        publishAlways()
+        tag("CI")
+    }
 }
