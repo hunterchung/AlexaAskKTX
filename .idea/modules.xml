@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/AlexaAskKTX.iml" filepath="$PROJECT_DIR$/AlexaAskKTX.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/AlexaAskKTX.main.iml" filepath="$PROJECT_DIR$/.idea/modules/AlexaAskKTX.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/AlexaAskKTX.test.iml" filepath="$PROJECT_DIR$/.idea/modules/AlexaAskKTX.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/hunterchung.AlexaAskKTX.iml" filepath="$PROJECT_DIR$/.idea/modules/hunterchung.AlexaAskKTX.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/hunterchung.AlexaAskKTX.main.iml" filepath="$PROJECT_DIR$/.idea/modules/hunterchung.AlexaAskKTX.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/hunterchung.AlexaAskKTX.test.iml" filepath="$PROJECT_DIR$/.idea/modules/hunterchung.AlexaAskKTX.test.iml" />
     </modules>
   </component>
 </project>
