@@ -4,6 +4,8 @@
     <bytecodeTargetLevel>
       <module name="AlexaAskKTX.main" target="1.10" />
       <module name="AlexaAskKTX.test" target="1.10" />
+      <module name="com.github.hunterchung.AlexaAskKTX.main" target="1.10" />
+      <module name="com.github.hunterchung.AlexaAskKTX.test" target="1.10" />
       <module name="hunterchung.AlexaAskKTX.main" target="1.10" />
       <module name="hunterchung.AlexaAskKTX.test" target="1.10" />
     </bytecodeTargetLevel>

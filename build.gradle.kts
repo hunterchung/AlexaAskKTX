@@ -1,9 +1,9 @@
 val alexaAskKTXVersion: String by project
 
-allprojects {
-    group = "hunterchung"
-    version = alexaAskKTXVersion
-}
+val group = "com.github.hunterchung"
+val version = alexaAskKTXVersion
+
+apply(plugin = "maven")
 
 plugins {
     val kotlinVersion = "1.3.20"
