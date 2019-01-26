@@ -17,3 +17,4 @@ deploy:
   file: build/libs/AlexaAskKTX-0.1.0.jar
   on:
     repo: hunterchung/AlexaAskKTX
+    branch: master
