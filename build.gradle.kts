@@ -3,7 +3,10 @@ val alexaAskKTXVersion: String by project
 val group = "com.github.hunterchung"
 val version = alexaAskKTXVersion
 
-apply(plugin = "maven")
+apply {
+    plugin("maven")
+    plugin("jacoco")
+}
 
 plugins {
     val kotlinVersion = "1.3.20"
@@ -11,6 +14,7 @@ plugins {
     id("org.jetbrains.kotlin.jvm").version(kotlinVersion)
     id("io.gitlab.arturbosch.detekt").version("1.0.0-RC12")
     id("com.gradle.build-scan") version "1.16"
+    jacoco
 }
 
 repositories {
@@ -42,4 +46,13 @@ buildScan {
         publishAlways()
         tag("CI")
     }
+}
+
+val jacocoVersion: String by project
+jacoco.toolVersion = jacocoVersion
+
+tasks.named<JacocoReport>("jacocoTestReport").configure {
+    reports.xml.isEnabled = true
+    reports.html.isEnabled = true
+    dependsOn(tasks.named("test"))
 }
