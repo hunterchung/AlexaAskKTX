@@ -1,12 +1,19 @@
 language: java
 jdk:
-  - openjdk8
+- openjdk8
 script:
-  - ./gradlew build -PwarningsAsErrors=true --scan -s
+- "./gradlew build -PwarningsAsErrors=true --scan -s"
 before_cache:
-  - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
-  - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
+- rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
+- rm -fr $HOME/.gradle/caches/*/plugin-resolution/
 cache:
   directories:
-    - $HOME/.gradle/caches/
-    - $HOME/.gradle/wrapper/
+  - "$HOME/.gradle/caches/"
+  - "$HOME/.gradle/wrapper/"
+deploy:
+  provider: releases
+  api_key:
+    secure: IPFM6RccuLQ1JLccrhO+1kgUGndzjklIxlHnrTuO34Mit9cRH/UGSJaTagMNtdNzjv32cfG/XX0CGJg2ZXJHL2TBh1ZxWlCn+V8JIJfHZvIlHoUpbKd8JK03tjpVhQ9LQsHnoN4pExANCSFVueoiJ1GUVjjCGiw9pLzgDxy7kobCz/ewXzGWc2LAhYNh50r/LWp1apqm+3vYEB71lcGLoYiHWkklm49CWg13O5JV81xQnTvwTCRSNBnIOCgc9Iy3FMSixcIpLBfz+hZoc7/sBRoLo2/mSnl5mscEnwlIjQU/gV/NYu1JyCtS7LVPfNecBMLaP+ER5LKt9SRLLTO+kUV5xRe614Pp6NaQv2SX/a45yaz3U6wYdQClmcdS1EpsZJKqCvQUQjCc5FHiEHacKu6WW+eZkYMskqOAHaNRVj68dzYed0CKSXqCyIXgfAuTUmCr2oZxBcz5CdVgC4tbd69qbmFWyJVL6BYRyIEKuK8x9hvLRZBH1crM9mmlcMLvoAPQtozmO6VAqYXz80isgK7hnmFSw8EMRKEXKjnZJfHKRa4SBB6gTnwxdwmobLp+CKVN3hBoumGdy3npPI7orX5pGdrzM95ZpLNjUpJ41vifLQRpH4Zabr55ILK2iFfxCEKplyaSdJhXFpvaiPnmPPtiYcNF3uIefxaEhKYsTko=
+  file: build/libs/AlexaAskKTX-0.1.0.jar
+  on:
+    repo: hunterchung/AlexaAskKTX
